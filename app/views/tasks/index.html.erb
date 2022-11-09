@@ -1,0 +1,7 @@
+<h1>Task list</h1>
+
+<% @tasks.each do |task| %>
+<%= task.name %><br><%= button_to "Delete", task_path(task), method: :delete %>
+<%= link_to "Edit", edit_task_path(task), method: :patch %><br>
+<% end %>
+<%= button_to "Add a task", new_task_path %>
